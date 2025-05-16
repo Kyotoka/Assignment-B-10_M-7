@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Showcase</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="page-title">JavaScript Functions Showcase</h1>
+            <p class="lead">Interactive demonstrations of essential JavaScript functions</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Add Numbers Function -->
+            <div class="col">
+                <div class="card h-100 function-card">
+                    <div class="card-header header-primary text-white">
+                        <h5 class="card-title"><i class="fas fa-plus-circle"></i> Add Numbers</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="code-block">
+                            <pre><code>// ADD A PAIR OF NUMBERS
+function add(x, y) {
+    let rslt = x + y;
+    return rslt
+}
+let nxt_rslt = add(75, 25) + add(50, 27) + add(32, 19);
+console.log("Result : " + nxt_rslt);</code></pre>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-label">Result:</div>
+                            <div id="add-result" class="result">228</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Odd or Even Function -->
+            <div class="col">
+                <div class="card h-100 function-card">
+                    <div class="card-header header-success text-white">
+                        <h5 class="card-title"><i class="fas fa-check-circle"></i> Odd or Even</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="code-block">
+                            <pre><code>// ODD OR EVEN ?
+function isEven(num) {
+    let conclusion;
+    if (num % 2 === 0) {
+        conclusion = "Even";
+    } else {
+        conclusion = "Odd";
+    }
+    return conclusion;
+}
+
+console.log("Conclusion = Number Is" + isEven(7));
+console.log("Conclusion = Number Is" + isEven(128));</code></pre>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-label">Results:</div>
+                            <div id="even-result-1" class="result">Conclusion = Number Is Odd</div>
+                            <div id="even-result-2" class="result">Conclusion = Number Is Even</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Celsius to Fahrenheit Function -->
+            <div class="col">
+                <div class="card h-100 function-card">
+                    <div class="card-header header-danger text-white">
+                        <h5 class="card-title"><i class="fas fa-temperature-high"></i> Celsius to Fahrenheit</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="code-block">
+                            <pre><code>// CELCIUS TO FARENHEIGHT
+function CtoF(C) {
+    let F;
+    F = ((C * (9 / 5)) + 32);
+    return F;
+}
+
+console.log("TEMP = " + CtoF(34) + "°F");</code></pre>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-label">Temperature:</div>
+                            <div id="temp-result" class="result">TEMP = 93.2°F</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Number Squared Function -->
+            <div class="col">
+                <div class="card h-100 function-card">
+                    <div class="card-header header-warning text-white">
+                        <h5 class="card-title"><i class="fas fa-superscript"></i> Number Squared</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="code-block">
+                            <pre><code>// NUMBER SQUARED
+function squared(x) {
+    let y;
+    y = x * x;
+    return y;
+}
+
+console.log("Number Squared IS = " + squared(5));</code></pre>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-label">Number Squared:</div>
+                            <div id="square-result" class="result">Number Squared IS = 25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Get First Character Function -->
+            <div class="col">
+                <div class="card h-100 function-card">
+                    <div class="card-header header-info text-white">
+                        <h5 class="card-title"><i class="fas fa-font"></i> Get First Character</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="code-block">
+                            <pre><code>// GET FIRST CHARACTER OR A STRING
+function getNthChar(str) {
+    return str.charAt(0)
+}
+console.log("The First Character Of The Given String Is :" 
+    + getNthChar("Got First Character OF The String"));</code></pre>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-label">First Character:</div>
+                            <div id="char-result" class="result">The First Character Of The Given String Is :G</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Created with <i class="fas fa-heart text-danger"></i> using JavaScript, Bootstrap 5, and custom CSS</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
+    <!-- Your JavaScript file -->
+    <script src="assignment.js"></script>
+</body>
+
+</html>
